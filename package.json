@@ -3,11 +3,14 @@
   "version": "1.0.0",
   "description": "Ecomsur tecnical test 2021",
   "main": "server.js",
+  "homepages":"https://xiomy-skayuri.github.io/testReact/",
   "scripts": {
     "start": "node backend/server",
     "server": "nodemon backend/server",
     "client": "npm start --prefix front",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "predeploy":"npm run build",
+    "deploy":"gh-pages -d build -r https://$testreact@github.com/xiomy-skayuri/testReact/"
   },
   "author": "Ecomsur",
   "license": "ISC",

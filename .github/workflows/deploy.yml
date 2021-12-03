@@ -27,4 +27,4 @@ steps:
 - name: deploy the app
   run: npm run deploy
   env:
-   TESTREACT: ${{ secrets.TESTREACT }}
+   TESTREACT: ${{ secrets.TESTREAC }}
