@@ -10,16 +10,13 @@ jobs:
   strategy:
    matrix:
     node-version: [ "12.x" ]
-
 steps:
   - uses: actions/checkout@v2
   - uses: actions/setup-node@v1 
     with:
       node-version: ${{matrix.node-version}}
-      
 - name: install packages
   run: npm install
-
 - name: registry github user
   run: |
     git config --global user.email <email>
@@ -27,4 +24,4 @@ steps:
 - name: deploy the app
   run: npm run deploy
   env:
-   TESTREACT: ${{ secrets.testreact}}
+   TESTREACT: ${{ secrets.TESTREAC }}
