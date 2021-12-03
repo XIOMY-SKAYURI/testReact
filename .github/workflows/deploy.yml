@@ -9,12 +9,12 @@ jobs:
   runs-on: ubuntu-latest
   strategy:
    matrix:
-    node-version: [ "12.x" ]
+    node-version: [ "14.x" ]
 steps:
   - uses: actions/checkout@v2
   - uses: actions/setup-node@v1 
     with:
-      node-version: ${{matrix.node-version}}
+      node-version: ${{matrix.14.17.6}}
 - name: install packages
   run: npm install
 - name: registry github user
