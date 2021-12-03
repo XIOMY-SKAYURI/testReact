@@ -15,26 +15,33 @@ code {
 /*Mobile-First*/
 
 
+
 .container-general{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   align-content: center;
+  width: 100%;
 
 }
 
 .dealCard{
   padding: 2%;
   margin: 4%;
-  width: 15%;
-  background-color: gray;
+  width: 35%;
+  height: 173px;
+ 
   border-radius:10px ;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  background: linear-gradient(to bottom left, #EF8D9C 40%, #FFC39E 100%);
+  
 }
+
 
  h2{
   text-align: center;
@@ -55,7 +62,207 @@ code {
  margin-right: 1%;
 }
 
+.card-title{
+  color: #ffffff;
+  font-size: 0.5rem;
+  height: 30px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 3%;
+  text-transform: capitalize;
+  /* margin: 0px; */
+}
 
 .dealCard img {
-  width: 80%;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	margin: 1%;
+	-webkit-transition: all 0.3s ease-out;
+	-o-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
+	border-radius: 5px;
+	cursor: help;
+}
+
+.dealCard img:hover {
+
+  box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+	-webkit-transform: translateY(-10px);
+	-ms-transform: translateY(-10px);
+	-o-transform: translateY(-10px);
+	transform: translateY(-10px);
+}
+
+.see-more{
+  color: #ffffff;
+  padding: 0.8rem;
+  font-size: 10px;
+  text-transform: uppercase;
+  border-radius: 4px;
+  font-weight: 400;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: transparent;
+padding: 2%;
+}
+/*desktop*/
+
+@media (min-width: 600px) {
+  .dealCard{
+    width: 20%; 
+    padding: 2%;
+    height: 420px;
+
+  }
+
+
+  .card-title{
+      font-size: 1.5rem;
+    height: 100px!important;
+    /* margin-bottom: 4%; */
+  
+  }
+}      
+
+/*nav Bar and search*/
+
+.container-nav-search{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.nav {
+  height: 50px;
+  width: 100%;
+  background-color: #4d4d4d;
+  position: relative;
+}
+
+.nav > .nav-header {
+  display: inline;
+}
+
+.nav > .nav-header > .nav-title {
+  display: inline-block;
+  font-size: 22px;
+  color: #fff;
+  padding: 0px 10px 15px 10px;
+}
+
+.nav > .nav-btn {
+  display: none;
+}
+
+.nav > .nav-links {
+  display: inline;
+  float: right;
+  font-size: 18px;
+}
+
+.nav > .nav-links > a {
+  display: inline-block;
+  padding: 13px 10px 13px 10px;
+  text-decoration: none;
+  color: #efefef;
+}
+
+.nav > .nav-links > a:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.nav > #nav-check {
+  display: none;
+}
+
+.container-logo{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  }
+  
+  .container-logo h1{
+   font-size: 1.2rem;
+   /* display: inline-block; */
+   color: white;
+   /* background: #fff; */
+   /* mix-blend-mode: multiply; */
+   /* position: relative; */
+   -webkit-text-stroke: 0.5px black;
+    }
+  
+  .logo{
+    margin-left: 5px;
+    height: 35px;
+   
+  }
+
+
+  #seacrh {
+    background: url(https://cdn0.iconfinder.com/data/icons/slim-square-icons-basics/100/basics-19-32.png) no-repeat 150px 5px;
+    background-size: 24px;
+    width: 500px;
+    border: transparent;
+    border-bottom: solid 1px #ccc;
+    padding: 10px 20px 10px 30px;
+    outline: none;
+    text-align: center;
+
+    margin-top: 3%;
+  
+  }
+
+@media (max-width:600px) {
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 100px;
+    padding: 13px;
+  }
+  .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #eee;
+  }
+  .nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: #333;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+  }
+  .nav > .nav-links > a {
+    display: block;
+    width: 100%;
+  }
+  .nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+  .nav > #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
+
 }
