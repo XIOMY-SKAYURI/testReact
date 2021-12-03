@@ -14,7 +14,7 @@ steps:
   - uses: actions/checkout@v2
   - uses: actions/setup-node@v1 
     with:
-      node-version: ${{matrix.14.17.6}}
+      node-version: ${{matrix.14}}
 - name: install packages
   run: npm install
 - name: registry github user
