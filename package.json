@@ -10,7 +10,7 @@
     "client": "npm start --prefix front",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "predeploy":"npm run build",
-    "deploy":"gh-pages -d build -r https://$testreact@github.com/xiomy-skayuri/testReact/"
+    "deploy":"gh-pages -d build -r https://$TESTREAC @github.com/xiomy-skayuri/testReact/"
   },
   "author": "Ecomsur",
   "license": "ISC",
